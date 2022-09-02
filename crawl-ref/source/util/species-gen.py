@@ -20,7 +20,7 @@ if sys.version_info.major == 2:
 else:
     from collections.abc import MutableMapping
 
-import yaml  # pip install pyyaml
+import PyYAML  # pip install pyyaml
 
 def quote_or_nullptr(key, d):
     if key in d:
