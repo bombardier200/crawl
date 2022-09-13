@@ -37,7 +37,7 @@ bind_port = 8080
 # )
 
 # to log to a file directly, uncomment and add something like:
-#    "filename": "webtiles.log",
+# "filename": "webtiles.log",
 # logging_config = {
 #     "level": logging.INFO,
 #     "format": "%(asctime)s %(levelname)s: %(message)s"
