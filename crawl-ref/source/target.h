@@ -273,14 +273,6 @@ public:
     aff_type is_affected(coord_def loc) override;
 };
 
-
-class targeter_corpse_rot : public targeter_radius
-{
-public:
-    targeter_corpse_rot();
-    aff_type is_affected(coord_def loc) override;
-};
-
 class targeter_thunderbolt : public targeter
 {
 public:
@@ -456,6 +448,16 @@ public:
 protected:
     set<coord_def> affected_positions;
     aff_type positive;
+};
+
+class targeter_scorch : public targeter_multiposition
+{
+public:
+    targeter_scorch(const actor &a, int _range, bool affect_invis);
+    bool valid_aim(coord_def c) override;
+
+protected:
+    int range;
 };
 
 class targeter_chain_lightning : public targeter
